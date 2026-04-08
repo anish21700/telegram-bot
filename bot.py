@@ -35,7 +35,10 @@ threading.Thread(target=run_server).start()
 
 # ===== START COMMAND =====
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    keyboard = [[InlineKeyboardButton("🚀 Register Here", url=REGISTER_LINK)]]
+    keyboard = [
+        [InlineKeyboardButton("🚀 Register Here", url=REGISTER_LINK)],
+        [InlineKeyboardButton("📢 Join Group", url="https://t.me/tradingtipsforyou")]
+    ]
     reply_markup = InlineKeyboardMarkup(keyboard)
 
     try:
